@@ -19,13 +19,13 @@
             <div class="form-row">
                 <div class="col-xs-12 col-sm-12">
                     <label for="firstname">First Name</label>
-                    <input id="firstname" type="text" class="form-control" id="firstname" name="firstname" required>
+                    <input type="text" class="form-control" id="afirstname" name="afirstname" required>
                 </div>
             </div>
             <div class="form-row">
                 <div class="col-xs-12 col-sm-12">
                     <label for="lastname">Last Name</label>
-                    <input id="lastname" type="text" class="form-control" id="lastname" name="lastname" required>
+                    <input type="text" class="form-control" id="alastname" name="alastname" required>
                 </div>
             </div>
             <div class="form-row">
@@ -43,14 +43,14 @@
             <div class="form-row">
                 <div class="col-xs-12 col-sm-12">
                     <label for="email">Email</label>
-                    <input id="email" type="email" name="email" id="email" class="form-control" required >
+                    <input type="email" name="aemail" id="aemail" class="form-control" required >
                 </div>
                 </div>
             
             <div class="form-row">
                 <div class="col-xs-12 col-sm-12">
                     <label for="phone">Phone</label>
-                    <input id="phone" type="number" name="phone" id="phone" class="form-control" required>
+                    <input type="number" name="aphone" id="aphone" class="form-control" required>
                 </div>
             </div>
             <div class="modal-footer">
@@ -70,7 +70,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="addemployeemodal">Edit employee</h5>
+          <h5 class="modal-title" id="editemployeemodal">Edit employee</h5>
           <button style="height:30px;" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
         </div>
         <div class="modal-body">
@@ -218,11 +218,11 @@
         $('#addemployeemodal').on('submit', function (e){
         e.preventDefault();
 
-        var firstname = $('#firstname').val();
-        var lastname = $('#lastname').val();
-        var company_id = $('#company_id').val();
-        var email = $('#email').val();
-        var phone = $('#phone').val();
+        var firstname = $('#afirstname').val();
+        var lastname = $('#alastname').val();
+        var company_id = $('#acompany_id').val();
+        var email = $('#aemail').val();
+        var phone = $('#aphone').val();
 
         console.log(phone);
         $.ajax({
@@ -266,7 +266,7 @@
           $('#company').val(data[3]);
           $('#email').val(data[4]);
           $('#phone').val(data[5]);
-      });
+      
       $('#editemployeeform').on('submit', function (e){
         e.preventDefault();
         var id = $('#id').val();
@@ -285,6 +285,7 @@
           }
         });
 
+      });
       });
 
     });
