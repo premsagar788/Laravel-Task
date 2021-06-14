@@ -20,21 +20,21 @@
             <div class="form-row">
                 <div class="col-xs-12 col-sm-12">
                     <label for="name">Name</label>
-                    <input id="name" type="text" class="form-control" id="name" name="name" required>
+                    <input type="text" class="form-control" id="aname" name="name" required>
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="col-xs-12 col-sm-12">
                     <label for="email">Email</label>
-                    <input id="email" type="email" name="email" id="email" class="form-control" required >
+                    <input  type="email" name="email" id="aemail" class="form-control" required >
                 </div>
                 </div>
             
             <div class="form-row">
                 <div class="col-xs-12 col-sm-12">
                     <label for="website">Website</label>
-                    <input id="website" type="text" name="website" id="website" class="form-control" required>
+                    <input type="text" name="website" id="awebsite" class="form-control" required>
                 </div>
             </div>
             <div class="modal-footer">
@@ -178,8 +178,6 @@
       }
     });
 
-    addcompanymodal
-
     $(document).ready(function(){
 
         $('.addcompany').on('click', function() {
@@ -189,9 +187,9 @@
         $('#addcompanymodal').on('submit', function (e){
         e.preventDefault();
 
-        var name = $('#name').val();
-        var email = $('#email').val();
-        var website = $('#website').val();
+        var name = $('#aname').val();
+        var email = $('#aemail').val();
+        var website = $('#awebsite').val();
 
         console.log(website);
         $.ajax({
